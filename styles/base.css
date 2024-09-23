@@ -259,6 +259,18 @@ main h2 {
     gap: 20px;
 }
 
+.course-completed {
+	background-color: lightgreen;
+	padding: 10px;
+	border: 1px solid green;
+}
+
+.course-incomplete {
+	background-color: lightcoral;
+	padding: 10px;
+	border: 1px solid red;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
