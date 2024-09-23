@@ -1,8 +1,7 @@
-const baseURL = "https://ferreiracamilo.github.io/wdd231/";
-const linksURL = "https://ferreiracamilo.github.io/wdd231/data/links.json";
+const courseWorkURL = "https://ferreiracamilo.github.io/wdd231/data/course-work.json";
 
 async function getLinks() {
-    const response = await fetch(linksURL);
+    const response = await fetch(courseWorkURL);
     const data = await response.json();
     displayLinks(data.weeks);
 }
