@@ -266,6 +266,11 @@ main h2 {
 	padding: 20px;
 }
 
+.card img{
+	max-width: 100%;
+    height: auto;
+}
+
 .card h3{
 	background-color: var(--secondary-color);
     display: block;
