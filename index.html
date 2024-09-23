@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Camilo Ferreira - WDD 230 - Web Frontend Development</title>
+        <meta name="description" content="WDD 230 - Web Frontend Development | Camilo Ferreira | Course Assignment Portal">
+        <meta name="author" content="Camilo Ferreira">
+        <meta property="og:title" content="WDD 230 - Web Frontend Development">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://i.imgur.com/vQkaKfQ.png">
+        <meta property="og:url" content="https://ferreiracamilo.github.io/wdd230/index.html">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </head>
+    <body>
+        <header>
+            <div class="container-darkmode-toggle">
+                <label class="switch" title="Dark Mode Toggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <img src="images/cf-prof-pic.webp" alt="">
+            <h1>Camilo Ferreira</h1>
+        </header>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="index">Home</a></li>
+                <li><a href="chamber/index?weather_api_key=REPLACE_API_KEY">Chamber</a></li>
+                <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+                <li><a href="form">Form</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="card-grid">
+                <section class="card">
+                    <h3>Learning Activities</h3>
+                    <ul id="learning-activities"></ul>
+                </section>
+                <section class="card">
+                    <h3>Information</h3>
+                    <p>Location: </p>
+                    <p>Weather: <span id="weather-component"></span></p>
+                    <p>Number of visits: <span id="visitCount">0</span></p>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p><span id="copyright-year"></span> | Camilo Ferreira | Montevideo, Uruguay</p>
+            <p id="lastModified"></p>
+        </footer>
+        <script src="scripts/getDates.js"></script>
+        <script src="scripts/hamburgerMenu.js"></script>
+        <script src="scripts/darkMode.js"></script>
+        <script src="scripts/links.js"></script>
+    </body>
+</html>
