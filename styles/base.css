@@ -257,13 +257,13 @@ main h2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-	padding-block: 20px;
 }
 
 .card {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	padding: 20px;
 }
 
 .card h3{
