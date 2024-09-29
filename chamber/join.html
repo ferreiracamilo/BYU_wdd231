@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Chamber of Commerce from Centro | Directory</title>
+        <title>Chamber of Commerce from Centro | Join</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Chamber of Commerce from Centro | Directory">
+        <meta name="description" content="WDD 230 - Web Frontend Development | Camilo Ferreira | Chamber of Commerce from Centro | Join">
         <meta name="author" content="Camilo Ferreira">
-        <meta property="og:title" content="Chamber of Commerce from Centro | Directory">
+        <meta property="og:title" content="Chamber of Commerce from Centro | Join">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://i.imgur.com/vQkaKfQ.png">
         <meta property="og:url" content="https://ferreiracamilo.github.io/wdd230/chamber/index.html">
@@ -24,7 +24,7 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <img src="images/logo/webp/logo-no-background-webp.webp" alt="Website Logo">
+            <img src="images/logo/webp/logo-no-background-webp.webp" alt="website logo">
             <h1>Chamber of Commerce from Centro</h1>
         </header>
 
@@ -39,11 +39,28 @@
         </nav>
 
         <main>
-            <div class="menu">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
+            <div class="form-container">
+                <form method="get" action="thankyou.html" class="form">
+                    <label class="top">First Name*: <input type="text" id="name" name="fname" required></label>
+                    <label class="top">Last Name*: <input type="text" id="lname" name="lname" required></label>
+                    <label class="top">Title/Position: <input type="text" id="position" name="position" pattern="^[a-zA-Z\s-]{7,}$"></label>
+                    <label class="top">Email*: <input type="email" id="email" name="email" placeholder="someone@mail.com" required></label>
+                    <label class="top">Mobile Phone Number*: <input type="tel" id="phone" name="phone" placeholder="12313213" required></label>
+                    <label class="top">Business' name: <input type="text" id="bname" name="bname" required></label>
+                    <div>Membership Level</div>
+                    <label class="sbs"><input type="radio" name="membership" value="nonprofit" id="nonprofit"> Nonprofit Membership</label> <!-- Enforce one radio button to be checked as default -->
+                    <label class="sbs"><input type="radio" name="membership" value="bronze" id="bronze"> Bronze Membership</label>
+                    <label class="sbs"><input type="radio" name="membership" value="silver" id="silver"> Silver Membership</label>
+                    <label class="sbs"><input type="radio" name="membership" value="gold" id="gold"> Gold Membership</label>
+                    <label class="top">Business' description:<textarea id="description" name="description" placeholder="Explain what customers can expect when they choose your business.." rows="4" cols="50"></textarea></label>
+                    <input type="hidden" name="timestamp" id="timestampField" value="">
+                    <input type="submit" value="Join the chamber" class="submitBtn">
+                </form>
+    
+                <div class="dynamic-text" id="dynamicText">
+                    <!-- Dynamic text content will be displayed here -->
+                </div>
             </div>
-            <article class="grid"></article>
         </main>
 
         <footer>
@@ -81,7 +98,6 @@
         <script src="scripts/darkMode.js"></script>
         <script src="scripts/weather.js"></script>
         <script src="scripts/getDatesFooter.js"></script>
-        <script src="scripts/switchViewDirectory.js"></script>
-        <script src="scripts/loadCompanies.js"></script>
+        <script src="scripts/joinForm.js"></script>
     </body>
 </html>

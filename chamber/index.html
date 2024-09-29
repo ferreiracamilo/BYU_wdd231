@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Chamber of Commerce from Centro | Directory</title>
+        <title>Chamber of Commerce from Centro | Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Chamber of Commerce from Centro | Directory">
+        <meta name="description" content="WDD 230 - Web Frontend Development | Camilo Ferreira | Chamber of Commerce from Centro | Home">
         <meta name="author" content="Camilo Ferreira">
-        <meta property="og:title" content="Chamber of Commerce from Centro | Directory">
+        <meta property="og:title" content="Chamber of Commerce from Centro | Home">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://i.imgur.com/vQkaKfQ.png">
         <meta property="og:url" content="https://ferreiracamilo.github.io/wdd230/chamber/index.html">
@@ -17,6 +17,24 @@
     </head>
     <body>
 
+        <!-- Email Newsletter Signup Pop-up -->
+        <div class="overlay" id="popup-overlay">
+            <div class="popup">
+                <span class="close-btn" id="close-popup">X</span>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay up-to-date with our latest news and offers!</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="banner">
+            <p>Join us at the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
+            <span class="close-banner-button" onclick="closeBanner()">❌</span>
+        </div>
+
         <header>
             <div class="container-darkmode-toggle">
                 <label class="switch" title="Dark Mode Toggle">
@@ -24,7 +42,7 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <img src="images/logo/webp/logo-no-background-webp.webp" alt="Website Logo">
+            <img src="images/logo/webp/logo-no-background-webp.webp" alt="website logo">
             <h1>Chamber of Commerce from Centro</h1>
         </header>
 
@@ -39,14 +57,36 @@
         </nav>
 
         <main>
-            <div class="menu">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
+            <div class="hero">
+                <picture>
+                    <source media="(min-width:800px)" srcset="images/heroimage/cordon-image-bigger-jpg.webp">
+                    <img src="images/heroimage/cordon-image-smaller-jpg.webp" alt="Montevideo Temple small image" loading="lazy">
+                </picture>
+                <div class="herolabel">
+                    <p>Tons of stores around Centro, Cordón and Ciudad Vieja with open sky walk</p>
+                </div>
             </div>
-            <article class="grid"></article>
+
+            <section id="company-spotlights">
+
+            </section>
+
+            <section id="event-section">
+                <div id="event-photos">
+                    <img class="photo active-photo" src="images/events-images/paseo-peatonal-webp.webp" alt="Event Photo 1 > Skywalk">
+                    <img class="photo" src="images/events-images/descuento-iva-webp.webp" alt="Event Photo 2 > Tax Discount">
+                    <img class="photo" src="images/events-images/dia-del-centro-free-parking-webp.webp" alt="Event Photo 3 > Free Parking">
+                </div>
+                <div>
+                    <span class="arrow" id="prev-btn">&#9664;</span>
+                    <span class="arrow" id="next-btn">&#9654;</span>
+                </div>
+            </section>
+
         </main>
 
         <footer>
+            
             <section id="internal-links">
                 <ul>
                     <li><a href="../week01/chamber-site-plan.html" target="_blank">Site Plan</a></li>
@@ -55,16 +95,16 @@
                 </ul>
             </section>
             <section id="social-media-links">
-                <a href="https://i.imgur.com/lK91ddb.png" target="_blank">
+                <a href="https://i.imgur.com./lK91ddb.png" target="_blank">
                     <img src="images/socialmedia/facebook-webp.webp" alt="facebook icon">
                 </a>
-                <a href="https://i.imgur.com/b3PzKzi.png" target="_blank">
+                <a href="https://i.imgur.com./b3PzKzi.png" target="_blank">
                     <img src="images/socialmedia/instagram-webp.webp" alt="instagram icon">
                 </a>
-                <a href="https://i.imgur.com/uvcQHjj.png" target="_blank">
+                <a href="https://i.imgur.com./uvcQHjj.png" target="_blank">
                     <img src="images/socialmedia/twitter-webp.webp" alt="twitter icon">
                 </a>
-                <a href="https://i.imgur.com/LEyHSJe.png" target="_blank">
+                <a href="https://i.imgur.com./LEyHSJe.png" target="_blank">
                     <img src="images/socialmedia/youtube-webp.webp" alt="youtube icon">
                 </a>
             </section>
@@ -76,12 +116,13 @@
                 <p>CentroChamber <span id="copyright-year"></span> | Camilo Ferreira | Montevideo, Uruguay | <span id="lastModified"></span> | <a href="mailto:centrochamber@comercio.uy">Send email</a></p>
             </section>
         </footer>
-
         <script src="scripts/hamburgerMenu.js"></script>
         <script src="scripts/darkMode.js"></script>
+        <script src="scripts/newsletter.js"></script> <!-- Only applicable for homepage to show up newsletter pop up call to action -->
+        <script src="scripts/eventSectionSlider.js"></script> <!-- Only applicable for homepage -->
         <script src="scripts/weather.js"></script>
         <script src="scripts/getDatesFooter.js"></script>
-        <script src="scripts/switchViewDirectory.js"></script>
-        <script src="scripts/loadCompanies.js"></script>
+        <script src="scripts/loadSpotlights.js"></script>
+        <script src="scripts/homeBanner.js"></script>
     </body>
 </html>

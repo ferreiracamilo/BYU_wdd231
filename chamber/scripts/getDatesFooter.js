@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     // Update the copyright year in the footer's first paragraph
     const copyrightYearElement = document.querySelector('#copyright-year');
-    copyrightYearElement.textContent = "©"+currentYear+" Chamber of Commerce";
+    copyrightYearElement.textContent = "© "+currentYear;
 
 
     // Get the last modified date of the document

@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+/************************************************************
+*
+*               Variables
+*
+************************************************************/
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #396E94   ;
+  --secondary-color: #E7C24F ;
+  --accent1-color: #A42212;
+  --accent2-color: #C67B31;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "IM Fell French Canon";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #396E94  ;
+  --nav-link-color: #396E94;
+  --nav-background-color: #D4AC0D;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #396E94;
+}
+
+/************************************************************
+*
+*               GENERAL TEXT PROPERTIES
+*
+************************************************************/
+
+h1, h2 {
+    margin: 0;
+}
+
+h3, h4 {
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    text-align: left;
+    font-family: var(--paragraph-font);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--paragraph-font);
+}
+
+ul{
+    text-align: left;
+}
+
+li {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+    font-size: 1.4rem;
+}
+
+nav li a{
+    color: var(--paragraph-color-on-color);
+}
+
+footer section *{
+    color: #333333
+}
+
+footer section a:hover{
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+header h1{
+    display: none;
+}
+
+main{
+    padding-top: 10px;
+}
+
+/************************************************************
+*
+*               Header
+*
+************************************************************/
+
+/*** HAEADER GENERIC RULES -and some other elements as main-***/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header, main, footer, nav {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+header {
+	background-color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+    margin: auto;
+	position: relative; /* Make sure toggle button will be on left within header width */
+}
+
+/*** HEADER NOT NAV RULES ***/
+header :not(nav){
+    padding-inline: 5px; /*Enforce a slight separation between profile picture and h1*/
+}
+
+header img{
+    width: 100px;
+    filter: drop-shadow(0 0 0.09rem var(--accent1-color));
+}
+
+header h1{
+	color: var(--text-color-on-color);
+}
+
+/* small view navigation */
+#menu {
+	border: 1px solid rgba(0,0,0,.3);
+	padding: .25rem .75rem;
+	background-color: #eee;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #333;
+	color: #fff;
+}
+
+.navigation li {
+	display: none;
+}
+
+.navigation li a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navigation li a:hover {
+	background-color: var(--accent2-color);
+	font-weight: 700; /* strength the font to highlight the option hovered */
+}
+
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+	display: block;
+	width: 100%;
+}
+
+.open li a {
+	display: block;
+}
+
+/************************************************************
+*
+*               Dark Mode Transition
+*
+************************************************************/
+
+.container-darkmode-toggle{
+	position: absolute;
+	top: 0.5rem;
+	left: 1%;
+}
+
+body {
+    transition: background-color 0.9s ease;
+}
+
+.switch {
+	margin-top: 5px;
+    position: relative;
+    display: inline-table;
+    width: 40px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: grey;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent2-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--accent2-color);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Dark Mode Styles */
+.dark-mode-body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode-nav {
+    border: 2px solid white;
+}
+
+/************************************************************
+*
+*               Nav bar
+*
+************************************************************/
+
+nav{
+	background-color: var(--primary-color);
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+    font: var(--paragraph-font);
+    color: var(--text-color-on-color);
+	text-align: center;
+	padding: 1rem;
+}
+
+nav a:hover {
+	border: 1px solid #fff;
+    background-color: var(--accent2-color);
+}
+
+/************************************************************
+*
+*               Hero Image
+*
+************************************************************/
+
+.hero {
+	margin-bottom: 10px;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 300px;
+}
+
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.herolabel {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: radial-gradient(#fff, #D4AC0D);
+	border: 1px solid rgba(0,0,0,.75);
+	padding: 0.5rem;
+	box-shadow: 0 0 0.5rem white;
+	opacity: 0.75;
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 700;
+	font-size: 1rem;
+	font-family:"Great Vibes", serif;
+    color: black;
+}
+
+
+/************************************************************
+*
+*               Footer
+*
+************************************************************/
+
+#copyright p{
+    font-size: 0.57em;
+}
+
+#internal-links li{
+    font-size: 1.17em;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 0.5px 0;
+}
+
+#internal-links li{
+    list-style: none;
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-rows: repeat(3, 0.2fr);
+    gap: 1em;
+}
+
+footer section{
+    margin: auto;
+}
+
+#social-media-links img{
+    width: 40px;
+}
+
+#weather-component{
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+#weatherList li{
+    font-size: 0.7em;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+
+/************************************************************
+*
+*               NEWSLETTER CALL TO ACTION
+*
+************************************************************/
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay h2, p{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.popup {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Styles for the close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/************************************************************
+*
+*               HOME PAGE > EVENT IMAGE SLIDER
+*
+************************************************************/
+
+/* CSS styles for the event section */
+#event-section {
+    text-align: center;
+}
+
+#event-description {
+    font-size: 18px;
+    margin: 10px;
+}
+
+#event-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    max-width: 100%;
+    display: none;
+}
+
+.active-photo {
+    display: block;
+}
+
+.arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/************************************************************
+*
+*               HOME PAGE > COMPANY SPOTLIGHT SECTION
+*
+************************************************************/
+
+#company-spotlights{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#company-spotlights h3, p{
+    color: black;
+}
+
+#company-spotlights article{
+    padding: 20px;
+}
+
+#spotlight1{
+    background-color: #E7C24F;
+}
+
+#spotlight2{
+    background-color: #e7c14fb4;
+}
+
+#spotlight3{
+    background-color: #e7c14f5b;
+}
+
+/************************************************************
+*
+*               DISCOVER PAGE > MAIN
+*
+************************************************************/
+
+#discover-container{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#discover-images img{
+    width: 400px;
+    display: block; /* Makes each image a block-level element */
+    margin-bottom: 10px;
+}
+
+#discover-sidebar article{
+    display: block; /* Makes each image a block-level element */
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    border-style: double;
+    padding:6px 10px;
+    color: white;
+}
+
+#discover-images figcaption{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/************************************************************
+*
+*               MODAL > LAST VISIT COUNTER MESSAGE
+*
+************************************************************/
+
+.modalLastVisit {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-lastVisit-content {
+    background-color: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#closeLastVisitModalBtn {
+    margin-top: 10px;
+}
+
+
+/************************************************************
+*
+*               THANKYOU PAGE
+*
+************************************************************/
+
+#thankyou{
+    text-align: center;
+}
+
+#thankyou img{
+    width: 20%;
+    background-color: #759ae9;
+    background-image: linear-gradient(to top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: linear-gradient(to top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    border-top: 1px solid #1f58cc;
+    border-right: 1px solid #1b4db3;
+    border-bottom: 1px solid #174299;
+    border-left: 1px solid #1b4db3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    color: #fff;
+    font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+    padding: 7px 0;
+    text-shadow: 0 -1px 1px #1a5ad9;
+}
+
+
+/************************************************************
+*
+*               JOIN PAGE
+*
+************************************************************/
+
+/** ----- FORM ----- **/
+form label.top{
+    display: block;
+    padding-top: 1rem;
+    color: var(--accent1-color);
+    font-size: 1rem;
+}
+
+form div{
+    color: var(--accent1-color);
+    font-size: 1rem;
+}
+
+form label.top input, form label.top textarea{
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: darkgray;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+form label.sbs{
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+form input.submitBtn{
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: .75rem 0 1.5rem 0;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required{
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid{
+    border-left: green solid 6px;
+}
+
+textarea#description{
+    /*Fix contrast issue*/
+    color: var(--accent1-color);
+    font-weight: lighter;
+}
+
+/* Style for the form container */
+.form-container {
+    display: flex;
+}
+
+/* Style for the form on the left */
+.form {
+    flex: 1;
+}
+
+/* Style for the dynamic text on the right */
+.dynamic-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.dynamic-text h2{
+    text-align: center;
+}
+
+.dynamic-text li{
+    font-size: 1rem;
+}
+
+/************************************************************
+*
+*               DIRECTORY PAGE
+*
+************************************************************/
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bed;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+.grid section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+    margin-bottom: 20px;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section *{
+    /* Force the h3 to look like as any other column value font size */
+    font-size: 1rem;
+}
+
+/* TURN DUMMY HEADER FROM JS INTO A FAKE HEADER */
+.list .dummy-header{
+    background-color: grey;
+}
+
+.list .dummy-header *{
+    color: white;
+    font-weight: bold;
+}
+/* TURN DUMMY HEADER FROM JS INTO A FAKE HEADER */
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+/* THE SPAN CLASS ENFORCED THAT WORKS TO INDICATE WHAT THE VALUE STANDS FOR IS BEING REMOVED FROM VIEW IN TABLE/LIST */
+.list .remove-span-list{
+    display: none;
+}
+
+.list section:nth-child(even) {
+	background-color: #bed;
+}
+
+.grid section h3 {
+	font-size: 1.5rem;
+}
+
+.grid section p {
+	font-weight: 600;
+	font-size: smaller;
+}
+
+.grid section a {
+	font-size: 0.85rem;
+	color: navy;
+	letter-spacing: 1.1pt;
+}
+
+.grid section img {
+	height: 75px;
+	max-width: 100%; /* Images are jerks - Seattle*/
+}
+
+.grid section.dummy-header{
+    /* Given a dummy card which works as a list header will not be displayed in grid view */
+    display: none;
+}
+
+
+/************************************************************
+*
+*               HOME BANNER ADDITION PER LAST WEEK REQ
+*
+************************************************************/
+
+ /* Styling for the banner */
+ #banner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  #banner p{
+    color: white;
+  }
+
+  /* Styling for the close button */
+  .close-banner-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }

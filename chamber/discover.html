@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Chamber of Commerce from Centro | Discover</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="WDD 230 - Web Frontend Development | Camilo Ferreira | Chamber of Commerce from Centro | Discover">
+        <meta name="author" content="Camilo Ferreira">
+        <meta property="og:title" content="Chamber of Commerce from Centro | Discover">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://i.imgur.com/vQkaKfQ.png">
+        <meta property="og:url" content="https://ferreiracamilo.github.io/wdd230/chamber/index.html">
+        <link rel="icon" type="image/x-icon" href="logo-color-ico.ico">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="container-darkmode-toggle">
+                <label class="switch" title="Dark Mode Toggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <img src="images/logo/webp/logo-no-background-webp.webp" alt="website logo">
+            <h1>Chamber of Commerce from Centro</h1>
+        </header>
+
+        <nav id="navbar-container">
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="index?weather_api_key=REPLACE_API_KEY">Home</a></li>
+                <li><a href="discover?weather_api_key=REPLACE_API_KEY">Discover</a></li>
+                <li><a href="directory?weather_api_key=REPLACE_API_KEY">Directory</a></li>                
+                <li><a href="join?weather_api_key=REPLACE_API_KEY">Join</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="modalLastVisit" class="modalLastVisit">
+                <div class="modal-lastVisit-content">
+                    <span id="modalMessageLastVisit"></span>
+                    <button id="closeLastVisitModalBtn">Close</button>
+                </div>
+            </div>
+
+            <div id="discover-container">
+                <section id="discover-sidebar">
+                    <article>
+                        The traditional “Día del Centro” is held once a month, in addition to the traditional discounts at participating locations, there will be free parking. Frequently offers are available during a whole weekend in several payment methods.
+                    </article>
+                    <article>
+                        Avenida 18 de Julio, from Ejido to Julio Herrera and Obes, will be pedestrian. During the day there will be traveling shows, artisan stalls, inclusive activities and much more.
+                    </article>
+                    <article>
+                        The range of items is as wide and rich as it is extravagant. This fair is a good opportunity to learn more about the social reality of current Uruguay. You can buy traditional pasta for Sunday lunch, books, CDs, cassettes, pasta records, old relics, ornaments, spare parts, games, furniture and pets, among other items. The Tristán Narvaja fair, inaugurated in 1909, is one of the postcards of Montevideo. It began selling fruits and vegetables but quickly diversified and expanded, until it became one of the most characteristic walks in the capital.
+                    </article>
+                </section>
+                <section id="discover-images">
+                    <figure>
+                        <img class="hover" src="images/discover/1.webp" loading="lazy" alt="Ciudad Vieja Library">
+                        <figcaption>Ciudad Vieja Library</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="hover" src="images/discover/2.webp" loading="lazy" alt="Ciudad Vieja Entry">
+                        <figcaption>Ciudad Vieja Entry</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="hover" src="images/discover/3.webp" loading="lazy" alt="Centro Skywalk">
+                        <figcaption>Centro Skywalk</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="hover" src="images/discover/4.webp" loading="lazy" alt="Feria Tristan Narvaja in Cordon 1">
+                        <figcaption>Feria Tristan Narvaja in Cordon 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="hover" src="images/discover/5.webp" loading="lazy" alt="Feria Tristan Narvaja in Cordon 2">
+                        <figcaption>Feria Tristan Narvaja in Cordon 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="hover" src="images/discover/6.webp" loading="lazy" alt="Entrepreneurs reunited in Centro">
+                        <figcaption>Entrepreneurs reunited in Centro</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <section id="internal-links">
+                <ul>
+                    <li><a href="../week01/chamber-site-plan.html" target="_blank">Site Plan</a></li>
+                    <li><a href="https://www.instagram.com/unioncomerciantes/?hl=es" target="_blank">Union de comerciantes del uruguay</a></li>
+                    <li><a href="https://www.cncs.com.uy/" target="_blank">Camara de comercio</a></li>
+                </ul>
+            </section>
+            <section id="social-media-links">
+                <a href="https://i.imgur.com/lK91ddb.png" target="_blank">
+                    <img src="images/socialmedia/facebook-webp.webp" alt="facebook icon">
+                </a>
+                <a href="https://i.imgur.com/b3PzKzi.png" target="_blank">
+                    <img src="images/socialmedia/instagram-webp.webp" alt="instagram icon">
+                </a>
+                <a href="https://i.imgur.com/uvcQHjj.png" target="_blank">
+                    <img src="images/socialmedia/twitter-webp.webp" alt="twitter icon">
+                </a>
+                <a href="https://i.imgur.com/LEyHSJe.png" target="_blank">
+                    <img src="images/socialmedia/youtube-webp.webp" alt="youtube icon">
+                </a>
+            </section>
+            <section id="weather-component">
+                <h5>☼ Weather Component ☼</h5>
+                <ul id="weatherList"></ul>
+            </section>
+            <section id="copyright">
+                <p>CentroChamber <span id="copyright-year"></span> | Camilo Ferreira | Montevideo, Uruguay | <span id="lastModified"></span> | <a href="mailto:centrochamber@comercio.uy">Send email</a></p>
+            </section>
+        </footer>
+
+        <script src="scripts/hamburgerMenu.js"></script>
+        <script src="scripts/darkMode.js"></script>
+        <script src="scripts/weather.js"></script>
+        <script src="scripts/lastVisitMgs.js"></script>
+        <script src="scripts/getDatesFooter.js"></script>
+    </body>
+</html>
