@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Tech Innovators Inc.",
+        "address": "123 Silicon Valley, San Francisco, CA, USA",
+        "phone_number": "+1-415-123-4567",
+        "website_url": "https://www.techinnovators.com",
+        "icon_filename": "tech_innovators_logo.png",
+        "membership_level": 3,
+        "industry": "Software Development",
+        "established": 2010
+    },
+    {
+        "name": "Green Energy Solutions",
+        "address": "45 Solar Drive, Denver, CO, USA",
+        "phone_number": "+1-720-987-6543",
+        "website_url": "https://www.greenenergy.com",
+        "icon_filename": "green_energy_logo.png",
+        "membership_level": 2,
+        "industry": "Renewable Energy",
+        "established": 2015
+    },
+    {
+        "name": "Global Freight Forwarders",
+        "address": "789 Logistics Parkway, Miami, FL, USA",
+        "phone_number": "+1-305-111-2222",
+        "website_url": "https://www.globalfreight.com",
+        "icon_filename": "global_freight_logo.png",
+        "membership_level": 1,
+        "industry": "Logistics and Transportation",
+        "established": 2005
+    },
+    {
+        "name": "Creative Media Studios",
+        "address": "22 Film Lane, Los Angeles, CA, USA",
+        "phone_number": "+1-213-333-4444",
+        "website_url": "https://www.creativemedia.com",
+        "icon_filename": "creative_media_logo.png",
+        "membership_level": 3,
+        "industry": "Media and Entertainment",
+        "established": 2008
+    },
+    {
+        "name": "HealthCare Partners",
+        "address": "98 Wellness Blvd, Austin, TX, USA",
+        "phone_number": "+1-512-555-6666",
+        "website_url": "https://www.healthcarepartners.com",
+        "icon_filename": "healthcare_partners_logo.png",
+        "membership_level": 2,
+        "industry": "Healthcare",
+        "established": 2000
+    },
+    {
+        "name": "Urban Retailers Group",
+        "address": "333 Shopping Ave, New York, NY, USA",
+        "phone_number": "+1-212-777-8888",
+        "website_url": "https://www.urbanretailers.com",
+        "icon_filename": "urban_retailers_logo.png",
+        "membership_level": 1,
+        "industry": "Retail",
+        "established": 1995
+    },
+    {
+        "name": "FinTech Global",
+        "address": "101 Finance St, Chicago, IL, USA",
+        "phone_number": "+1-312-999-0000",
+        "website_url": "https://www.fintechglobal.com",
+        "icon_filename": "fintech_global_logo.png",
+        "membership_level": 3,
+        "industry": "Financial Technology",
+        "established": 2012
+    }
+]
