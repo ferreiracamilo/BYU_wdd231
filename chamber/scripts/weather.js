@@ -30,7 +30,7 @@ function fetchWeather() {
               //Extract api key from URL
               const apiKey = "56292c3d81msha217e7bc117cbd1p1b9f40jsnf3ed10f61cf3";
 
-              const apiUrl = `https://open-weather13.p.rapidapi.com/city/${city}`;
+              const apiUrl = `https://open-weather13.p.rapidapi.com/city/${city}/%7Blang%7D`;
               const options = {
                 method: 'GET',
                 headers: {
