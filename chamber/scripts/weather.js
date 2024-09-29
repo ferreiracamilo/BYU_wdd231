@@ -28,14 +28,7 @@ function fetchWeather() {
               // Get the current URL
               const currentURL = window.location.href;
               //Extract api key from URL
-              const apiKey = getQueryParam(currentURL, 'weather_api_key');
-              // Check if apiKey is not null or empty before using it
-                if (apiKey) {
-                    // Use apiKey in your API request or for other purposes
-                    console.log('API Key:', apiKey);
-                } else {
-                    console.error('API Key not found in the URL');
-                }
+              const apiKey = "56292c3d81msha217e7bc117cbd1p1b9f40jsnf3ed10f61cf3";
 
               const apiUrl = `https://open-weather13.p.rapidapi.com/city/${city}`;
               const options = {
