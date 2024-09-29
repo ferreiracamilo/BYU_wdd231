@@ -1,4 +1,4 @@
-const url = "https://ferreiracamilo.github.io/wdd230/chamber/data/spotlights.json";
+const url = "https://ferreiracamilo.github.io/wdd231/chamber/data/spotlights.json";
 
 const spotlightsZone = document.querySelector('#company-spotlights');
 
