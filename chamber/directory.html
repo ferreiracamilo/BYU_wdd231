@@ -35,6 +35,16 @@
             </label>
         </div>
         <main>
+            <div class="container">
+                <h1>Member Directory</h1>
+                <div class="view-toggle">
+                    <button onclick="toggleView('grid')">Grid View</button>
+                    <button onclick="toggleView('list')">List View</button>
+                </div>
+                <div id="members-container" class="members-grid">
+                    <!-- Member cards will be dynamically inserted here -->
+                </div>
+            </div>
             
         </main>
         <footer>
@@ -60,5 +70,6 @@
         <script defer src="scripts/getDates.js"></script>
         <script defer src="scripts/hamburgerMenu.js"></script>
         <script defer src="scripts/darkMode.js"></script>
+        <script defer src="scripts/stores.js"></script>
     </body>
 </html>
