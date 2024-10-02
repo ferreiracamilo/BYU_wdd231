@@ -506,6 +506,57 @@ footer section{
 
 /************************************************************
 *
+*               HOME PAGE > COMPANIES CAROUSEL
+*
+************************************************************/
+
+.companies-carousel {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+}
+
+.companies-carousel h2{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    animation: scroll 8s linear infinite;
+}
+
+.carousel-item {
+    width: 33.3333%;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.company-details {
+    font-size: 14px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/************************************************************
+*
 *               DISCOVER PAGE > MAIN
 *
 ************************************************************/
@@ -805,7 +856,7 @@ textarea#description{
 ************************************************************/
 
  /* Styling for the banner */
- #banner {
+#banner {
     display: none;
     position: fixed;
     top: 0;
@@ -815,16 +866,16 @@ textarea#description{
     padding: 10px;
     text-align: center;
     z-index: 9999;
-  }
+}
 
-  #banner p{
+#banner p{
     color: white;
-  }
+}
 
-  /* Styling for the close button */
-  .close-banner-button {
+/* Styling for the close button */
+.close-banner-button {
     position: absolute;
     top: 5px;
     right: 10px;
     cursor: pointer;
-  }
+}
