@@ -1,9 +1,9 @@
-const urlX = "https://ferreiracamilo.github.io/wdd231/chamber/data/members.json";
+const urlMembersData = "https://ferreiracamilo.github.io/wdd231/chamber/data/members.json";
 const membersZone = document.querySelector('.carousel-track');
 
 async function getMembersData() {
     try {
-        const response = await fetch(urlX);
+        const response = await fetch(urlMembersData);
         const data = await response.json();
 
         const goldMembers = data.members.filter(member => member.membership === 'Gold');

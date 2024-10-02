@@ -1,9 +1,9 @@
-const url = "https://ferreiracamilo.github.io/wdd231/chamber/data/spotlights.json";
+const urlSpotlights = "https://ferreiracamilo.github.io/wdd231/chamber/data/spotlights.json";
 
 const spotlightsZone = document.querySelector('#company-spotlights');
 
 async function getSpotlightsData(){
-    const response = await fetch(url);
+    const response = await fetch(urlSpotlights);
     const data = await response.json();
     displaySpotlights(data.spotlights);
 }
