@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/base.css">
+    <title>Matches sidebar page sample</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./teams-sample.html">Browse Teams</a></li>
+                <li><a href="./players-sample.html">Browse Players</a></li>
+                <li><a href="./matches-sample.html">Browse Matches</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main>
+        <sidebar>
+            <article matchid="123131">
+                <!-- article > player card for slider -->
+                <img src="" alt="team logo 1">
+                <p>2-0</p> <!-- first team points - second team points -->
+                <img src="" alt="team logo 2">
+            </article>
+            <article matchid="32131231">
+                <!-- article > player card for slider -->
+                <img src="" alt="team logo 1">
+                <p>2-1</p> <!-- first team points - second team points -->
+                <img src="" alt="team logo 2">
+            </article>
+            <article matchid="321321">
+                <!-- article > player card for slider -->
+                <img src="" alt="team logo 1">
+                <p>3-0</p> <!-- first team points - second team points -->
+                <img src="" alt="team logo 2">
+            </article>
+            
+        </sidebar>
+    </main>
+
+    <footer>
+        &copy; 2024 - Counter-Strike Portal
+    </footer>
+
+    <script src="./scripts/menuToggle.js" defer></script>
+</body>
+</html>

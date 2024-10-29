@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #3a3a3a; /* Color principal */
+    --secondary-color: #e63946; /* Color secundario */
+    --text-color: #ffffff; /* Color del texto */
+    --hover-move: -2px; /* Desplazamiento al hacer hover */
+    --click-color: #ff4d4d; /* Color al hacer clic */
+    --font-family: 'Arial', sans-serif; /* Fuente general */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: #1e1e1e;
+    color: var(--text-color);
+}
+
+/* 
+
+---------------------------------------------
+---------------------------------------------
+HEADER SECTION
+---------------------------------------------
+---------------------------------------------
+
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    position: relative; /* Para posicionar el menú de hamburguesa */
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Para mantener el botón en la esquina superior derecha */
+    top: 10px; /* Ajusta el espacio desde el borde superior */
+    right: 10px; /* Ajusta el espacio desde el borde derecho */
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Estilos del menú de navegación */
+.navbar {
+    display: none; /* Escondido por defecto */
+}
+
+.navbar.active {
+    display: block; /* Mostrar el menú cuando es activo */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.4s ease-in-out; /* Transición suave para la aparición */
+    animation: glideIn 0.4s forwards; /* Efecto de deslizamiento */
+}
+
+@keyframes glideIn {
+    from {
+        transform: translateY(-20px); /* Comienza un poco más arriba */
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        transform: translateY(0); /* Termina en su posición original */
+        opacity: 1; /* Se hace visible */
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease, color 0.2s ease; /* Transiciones suaves */
+}
+
+/* Efecto de agitar al pasar el mouse */
+.navbar ul li a:hover {
+    color: var(--secondary-color); /* Cambia el color en hover */
+}
+
+/* Efecto al hacer clic */
+.navbar ul li a:active {
+    color: var(--click-color); /* Cambia el color al hacer clic */
+}
+
+/* Estilo adicional cuando el menú está activo */
+.menu-toggle.active .bar {
+    background-color: var(--secondary-color); /* Cambia el color de las barras cuando el menú está activo */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px); /* Transforma la barra superior */
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Oculta la barra del medio */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px); /* Transforma la barra inferior */
+}
+
+/* 
+---------------------------------------------
+---------------------------------------------
+INDEX SECTION
+---------------------------------------------
+---------------------------------------------
+*/
+
+main {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.featured-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--text-color); /* Fondo blanco para la sección destacada */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.featured-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.featured-section h3, .featured-section p{
+    color: var(--primary-color);
+}
+
+.featured-section h3{
+    padding: 20px;
+}
+
+.card-home {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.card-home:last-child {
+    border-bottom: none; /* Sin borde en el último elemento */
+}
+
+.card-home img {
+    width: 50px; /* Tamaño del logo o imagen */
+    height: 50px;
+    border-radius: 50%; /* Bordes redondeados */
+    margin-right: 15px;
+}
+
+/* 
+---------------------------------------------
+---------------------------------------------
+FOOTER SECTION
+---------------------------------------------
+---------------------------------------------
+*/
+footer {
+    text-align: center; /* Center text horizontally */
+    position: relative; /* Default positioning */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for spacing */
+    background-color: #f8f8f8; /* Background color */
+    border-top: 1px solid #ccc; /* Optional border on top */
+    color: #333; /* Text color */
+    bottom: 0; /* Position at the bottom */
+}
