@@ -70,7 +70,8 @@ async function fetchData() {
         const teamName = playersData[0].name; // Assuming the first team's name is to be used
         playerTeam.textContent = teamName;
         playerTeamLink.setAttribute('data-team-name', teamName);
-        
+        const event = new Event('dataLoaded');
+        document.dispatchEvent(event);
     } catch (error) {
         alert('An error occurred while fetching player data.');
         console.error(error);
