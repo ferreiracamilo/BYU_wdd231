@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/base.css">
-    <title>Teams Sidebar sample page</title>
+    <title>Teams slider page sample</title>
 </head>
 <body>
     <header>
@@ -24,50 +24,29 @@
     </header>
 
     <main>
-        <slider>
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-            <article>
-                <a href="./team-sample.html" data-team-id="team1">
-                    <img src="https://img-cdn.hltv.org/teamlogo/NXMLun_eKCyApJQzmJB38q.png?ixlib=java-2.1.0&w=50&s=5b1bdf21f6665811751df6324094d25a" id="team-1-image" alt="team 1 logo">
-                    <p id="team-1-name">asda</p>
-                </a>
-            </article>
-
-        </slider>
+        <section class="teams">
+            <h1>Featured Teams</h1>
+            <div class="slider-container">
+                <button class="arrow left-arrow" aria-label="Previous team">&lt;</button>
+                <div class="slider">
+                    <article>
+                        <a href="./team-sample.html" data-team-nickname="nickname">
+                            <img src="https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb" alt="team image">
+                            <p><span class="team-fullname">Team 1</span></p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="./team-sample.html" data-team-nickname="nickname">
+                            <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa" alt="team image">
+                            <p><span class="team-fullname">Team 2</span></p>
+                        </a>
+                    </article>
+                    <!-- Add more player articles as needed -->
+                </div>
+                <button class="arrow right-arrow" aria-label="Next team">&gt;</button>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
@@ -75,5 +54,6 @@
     </footer>
 
     <script src="./scripts/menuToggle.js" defer></script>
+    <script src="./scripts/slider.js" defer></script>
 </body>
 </html>

@@ -442,6 +442,31 @@ article {
     color: var(--text-color); /* Color del texto (ajusta según tu paleta) */
 }
 
+/* ------------- */
+/* TEAMS PAGE */
+/* ----------- */
+.teams h1{
+    text-align: center;
+}
+.teams article {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.teams article img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Mantiene la proporción cuadrada */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.teams>.team-fullname {
+    color: var(--text-color); /* Color del texto (ajusta según tu paleta) */
+}
+
 /* -------------- */
 /* FOOTER SECTION */
 /* -------------- */
