@@ -67,7 +67,7 @@ async function fetchData() {
         // Set team name and data-team-name attribute
         const playerTeam = document.getElementById('player-team');
         const playerTeamLink = document.querySelector('a[data-team-name]');
-        const teamName = playersData[0].name; // Assuming the first team's name is to be used
+        const teamName = matchData.team; // Assuming the first team's name is to be used
         playerTeam.textContent = teamName;
         playerTeamLink.setAttribute('data-team-name', teamName);
         const event = new Event('dataLoaded');
