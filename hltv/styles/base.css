@@ -214,7 +214,9 @@ main {
     color: var(--text-color); /* Color del texto de la lista */
 }
 
+/* ---------------------------- */
 /* PLAYER PAGE SPECIFIC STYLES */
+/* -------------------------- */
 #topPlayerPage>#player-image {
     width: 150px; /* Ajuste de tamaño de la imagen */
     border-radius: 50%; /* Imagen circular */
