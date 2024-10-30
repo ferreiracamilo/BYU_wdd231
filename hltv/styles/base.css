@@ -160,6 +160,33 @@ main {
 }
 
 /* -------------- */
+/* MATCH PAGE */
+/* -------------- */
+#opponents {
+    display: flex;
+    align-items: center; /* Alinea los elementos del contenedor */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+#opponents a {
+    margin: 0 10px; /* Espacio entre los logos de los equipos */
+}
+
+#matchInfo {
+    list-style: none; /* Eliminar estilo de lista */
+    padding: 5%; /* Eliminar padding */
+    margin: 20px 0; /* Espacio superior e inferior */
+    text-align: center; /* Centrar el texto */
+    background-color: var(--primary-color); /* Color de fondo de la lista */
+}
+
+#matchInfo li {
+    padding: 5px 0; /* Espacio entre los elementos de la lista */
+    color: var(--text-color); /* Color del texto de la lista */
+}
+
+/* -------------- */
 /* FOOTER SECTION */
 /* -------------- */
 footer {

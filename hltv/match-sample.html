@@ -25,24 +25,24 @@
 
     <main>
         <!-- En la parte mas alta del main aparece esto en una misma linea -->
-        <section>
-            <a href="./team-sample.html"><img src="team 1 logo" alt="link to team 1"></a>
-            <p>pointsTeam1 - pointsTeam2</p>
-            <a href="./team-sample.html"><img src="team 2 logo" alt="link to team 2"></a>
+        <section id="opponents">
+            <a href="./team-sample.html" data-team="team1"><img src="team 1 logo" id="team-1-image" alt="team 1 logo"></a>
+            <p><span id="team-1-points">2</span> - <span id="team-2-points">0</span></p>
+            <a href="./team-sample.html" data-team="team2"><img src="team 2 logo" id="team-2-image" alt="team 2 logo"></a>
         </section>
         
-        <ul>
+        <ul id="matchInfo">
             <li>
-                Event: event Name
+                Event: <span id="eventName">event Name</span>
             </li>
             <li>
-                Mode of match: bo3
+                Mode of match: <span id="matchMode">bo3</span>
             </li>
             <li>
-                Match date: 
+                Match date: <span id="matchDate">2022-10-23</span>
             </li>
             <li>
-                Match time: 
+                Match time: <span id="matchTime">22:22:24</span>
             </li>
         </ul>
     </main>
