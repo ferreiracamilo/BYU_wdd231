@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 articlesContainer.appendChild(article);
             });
-            // Assuming this is at the end of your data loading logic
+            // Assume end of your data loading logic
             const event = new Event('dataLoaded');
             document.dispatchEvent(event);
         })

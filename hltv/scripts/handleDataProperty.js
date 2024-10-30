@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener('click', (event) => {
                 const linkElement = event.currentTarget;
 
-                // Clear all specific localStorage properties to reset state
+                // Clear all specific localStorage properties to reset state so if end user returns to a page dependant on this directly there won't be wrong data filled out
                 localStorage.removeItem('selectedTeamName');
                 localStorage.removeItem('selectedPlayerNickname');
                 localStorage.removeItem('selectedMatchId');

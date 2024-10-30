@@ -31,7 +31,7 @@ fetch("https://hltv-api.vercel.app/api/player.json")
         teamPlayersSection.innerHTML = "<h2>Team Players</h2>"; // Reset to avoid duplicate entries
 
         teamData.players.forEach(player => {
-            // Remove nickname from fullanem
+            // Remove nickname from fullname
             const fullName = player.fullname.replace(/'[^']*'/, "").trim();
 
             // Create the article element for player
@@ -46,6 +46,7 @@ fetch("https://hltv-api.vercel.app/api/player.json")
             
             teamPlayersSection.appendChild(playerArticle);
         });
+        // Assume end of your data loading logic
         const event = new Event('dataLoaded');
         document.dispatchEvent(event);
     }).catch(error => {

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const selectedMatchId = localStorage.getItem("selectedMatchId");
 
-    // Función para mostrar advertencias con alert
+    // Function to show javascript alert
     function showWarning(message) {
         alert(message);
     }
