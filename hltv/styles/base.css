@@ -44,7 +44,7 @@ header {
 
 /* -------------- */
 /* Navbar styles */
-/* -------------- */
+/* ------------ */
 
 .navbar {
     display: none;
@@ -109,7 +109,7 @@ header {
 
 /* -------------- */
 /* INDEX SECTION */
-/* ------------- */
+/* ------------ */
 main {
     display: flex;
     flex-direction: column;
@@ -160,9 +160,9 @@ main {
     border-bottom: none;
 }
 
-/* -------------- */
+/* ----------- */
 /* MATCH PAGE */
-/* -------------- */
+/* --------- */
 #opponents {
     display: flex;
     align-items: center; /* Alinea los elementos del contenedor */
@@ -242,6 +242,86 @@ main {
 #playerInfo li a:hover {
     color: var(--click-color); /* Color al hacer hover */
 }
+
+/* -------------------------- */
+/* TEAM PAGE SPECIFIC STYLES */
+/* ------------------------ */
+#topTeamPage {
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#team-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#topTeamPage h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#topTeamPage ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#topTeamPage li {
+    margin: 8px 0;
+}
+
+#teamPlayers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 80%;
+    text-align: center;
+}
+
+#teamPlayers a{
+    text-decoration: none;
+}
+
+#teamPlayers h2 {
+    grid-column: span 5;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+#teamPlayers article {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#teamPlayers article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#teamPlayers img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#teamPlayers p {
+    color: var(--text-color);
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
 
 /* -------------- */
 /* FOOTER SECTION */
