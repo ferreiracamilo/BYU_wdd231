@@ -37,7 +37,7 @@ fetch("https://hltv-api.vercel.app/api/player.json")
             // Create the article element for player
             const playerArticle = document.createElement("article");
             playerArticle.innerHTML = `
-            <a href="./player-sample.html" data-player-nickname="${player.nickname}">
+            <a href="./player.html" data-player-nickname="${player.nickname}">
                 <img src="${player.image}" alt="${player.nickname} player image">
                 <p>Full Name: <span id="player-fullname">${fullName}</span></p>
                 <p>Nickname: <span id="player-nickname">${player.nickname}</span></p>
@@ -46,6 +46,8 @@ fetch("https://hltv-api.vercel.app/api/player.json")
             
             teamPlayersSection.appendChild(playerArticle);
         });
+        const event = new Event('dataLoaded');
+        document.dispatchEvent(event);
     }).catch(error => {
         alert(error.message || "An error occurred while loading the match data. Please try again later.");
     });
