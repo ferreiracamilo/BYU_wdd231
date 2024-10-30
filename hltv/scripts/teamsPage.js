@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 articlesContainer.appendChild(article);
             });
-
-            // Llama a la función de actualización del slider después de agregar los artículos
-            slider.init(); // Esto debe llamar a updateSlider automáticamente
         })
         .catch(error => {
             console.error('Error fetching the team data:', error);
