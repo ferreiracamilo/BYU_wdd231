@@ -496,3 +496,13 @@ footer {
     color: #333;
     bottom: 0;
 }
+
+footer p{
+	margin: 10px;
+}
+
+footer p img{
+	max-height: 2.5em;
+	vertical-align: middle;
+	display: inline-block;
+}
