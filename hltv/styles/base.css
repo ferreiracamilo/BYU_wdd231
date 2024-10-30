@@ -365,7 +365,7 @@ main {
     transition: transform 0.5s ease; /* Suaviza la transición al moverse */
 }
 
-article {
+.slider-container > .slider > article {
     flex: 0 0 100%; /* Cada artículo ocupará el 100% del ancho del contenedor */
     display: flex; /* Permite que los elementos internos sean flexibles */
     justify-content: center; /* Centra el contenido del artículo */
@@ -394,6 +394,10 @@ article {
 /* MATCHES PAGE */
 /* ----------- */
 
+.matches{
+    width: 40%;
+}
+
 .matches h1{
     text-align: center; /* Centra el texto horizontalmente */
 }
@@ -420,6 +424,9 @@ article {
 /* ------------- */
 /* PLAYERS PAGE */
 /* ----------- */
+.players{
+    width: 40%;
+}
 .players h1{
     text-align: center;
 }
@@ -448,6 +455,11 @@ article {
 .teams h1{
     text-align: center;
 }
+
+.teams{
+    width: 40%;
+}
+
 .teams article {
     display: flex;
     flex-direction: column; /* Alinea los elementos en columna */
