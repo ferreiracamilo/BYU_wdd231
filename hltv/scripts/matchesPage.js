@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const article = document.createElement('article');
 
                 article.innerHTML = `
-                    <a href="./match-sample.html" data-match-id="${match.matchId}">
+                    <a href="./match.html" data-match-id="${match.matchId}">
                         <div class="match">
                             <img class="team-logo" src="${match.teams[0].logo}" alt="${match.teams[0].name} Team Logo">
                             <p class="score">${match.teams[0].result} - ${match.teams[1].result}</p>

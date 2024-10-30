@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const article = document.createElement('article');
                     
                     article.innerHTML = `
-                        <a href="./player-sample.html" data-player-nickname="${player.nickname}">
+                        <a href="./player.html" data-player-nickname="${player.nickname}">
                             <img src="${player.image}" alt="${player.nickname} player image">
                             <p><span class="player-fullname">${player.fullname}</span></p>
                         </a>

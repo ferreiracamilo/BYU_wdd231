@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const article = document.createElement('article');
 
                 article.innerHTML = `
-                    <a href="./team-sample.html" data-team-name="${team.name}">
+                    <a href="./team.html" data-team-name="${team.name}">
                         <img src="${team.logo}" alt="Team ${team.name} image">
                         <p><span class="team-fullname">${team.name}</span></p>
                     </a>
