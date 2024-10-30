@@ -345,6 +345,79 @@ main {
     font-size: 0.9em;
 }
 
+/* -------------------- */
+/* BROWSE PAGES SLIDER */
+/* ------------------ */
+
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.slider-container a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.slider {
+    display: flex; /* Disposición horizontal */
+    transition: transform 0.5s ease; /* Suaviza la transición al moverse */
+}
+
+article {
+    flex: 0 0 100%; /* Cada artículo ocupará el 100% del ancho del contenedor */
+    display: flex; /* Permite que los elementos internos sean flexibles */
+    justify-content: center; /* Centra el contenido del artículo */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente las flechas */
+    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Espaciado interno */
+    z-index: 10; /* Asegúrate de que las flechas estén por encima */
+}
+
+.left-arrow {
+    left: 10px; /* Ubicación a la izquierda */
+}
+
+.right-arrow {
+    right: 10px; /* Ubicación a la derecha */
+}
+
+/* -------------- */
+/* MATCHES PAGE */
+/* -------------- */
+
+.matches h1{
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido en el slider */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.team-logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    margin: 0 20px; /* Espaciado entre los logos y el resultado */
+}
+
+.score {
+    font-size: 24px; /* Tamaño de la fuente para el resultado */
+    font-weight: bold; /* Negrita para resaltar el resultado */
+    text-align: center; /* Asegura que el texto esté centrado */
+    flex: 1; /* Permite que el resultado ocupe el espacio restante */
+}
+
 /* -------------- */
 /* FOOTER SECTION */
 /* -------------- */
