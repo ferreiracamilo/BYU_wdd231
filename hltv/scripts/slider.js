@@ -1,31 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let currentIndex = 0; // Índice del artículo visible
-    const articles = document.querySelectorAll('.slider article'); // Selecciona todos los artículos
-    const totalArticles = articles.length; // Total de artículos
-    const slider = document.querySelector('.slider'); // Contenedor del slider
+// slider.js
 
-    function updateSlider() {
-        // Ajusta el transform según el índice actual
-        const offset = -currentIndex * 100; // Calcula el desplazamiento
-        slider.style.transform = `translateX(${offset}%)`; // Aplica la transformación
+document.addEventListener("DOMContentLoaded", () => {
+    const sliderElement = document.querySelector('.slider');
+    let articles = []; // Array de artículos en el slider
+    let currentIndex = 0; // Índice actual del artículo visible
+
+    // Inicializa el slider después de cargar los artículos
+    function initSlider() {
+        articles = document.querySelectorAll('.slider article');
+        updateSlider();
     }
 
-    document.querySelector('.left-arrow').addEventListener('click', () => {
-        currentIndex--; // Disminuye el índice
+    // Actualiza el desplazamiento del slider para mostrar solo un artículo a la vez
+    function updateSlider() {
+        const offset = -currentIndex * 100; // Calcula el desplazamiento para un solo artículo
+        sliderElement.style.transform = `translateX(${offset}%)`; // Desplazamiento en porcentaje
+    }
+
+    // Función para avanzar en el slider
+    function next() {
+        currentIndex++;
+        if (currentIndex >= articles.length) {
+            currentIndex = 0; // Vuelve al inicio al llegar al final
+        }
+        updateSlider();
+    }
+
+    // Función para retroceder en el slider
+    function prev() {
+        currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = totalArticles - 1; // Regresa al último artículo
+            currentIndex = articles.length - 1; // Vuelve al último artículo si retrocede más allá del primero
         }
         updateSlider();
-    });
+    }
 
-    document.querySelector('.right-arrow').addEventListener('click', () => {
-        currentIndex++; // Aumenta el índice
-        if (currentIndex >= totalArticles) {
-            currentIndex = 0; // Regresa al primer artículo
-        }
-        updateSlider();
-    });
+    // Configura los eventos de los botones
+    document.querySelector('.left-arrow').addEventListener('click', prev);
+    document.querySelector('.right-arrow').addEventListener('click', next);
 
-    // Llama a la función de actualización inicial para centrar el primer artículo
-    updateSlider();
+    // Escucha cuando se agreguen artículos dinámicamente y reinicia el slider
+    const observer = new MutationObserver(initSlider);
+    observer.observe(sliderElement, { childList: true });
+
+    // Llama a initSlider para la configuración inicial
+    initSlider();
 });
