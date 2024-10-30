@@ -1,6 +1,3 @@
-//IN PROGRESS
-//IN PROGRESS
-
 document.addEventListener("DOMContentLoaded", () => {
     const articlesContainer = document.querySelector('.slider');
 
@@ -8,19 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             data.forEach(team => {
-                const article = document.createElement('article');
-
-                article.innerHTML = `
-                    <a href="./team-sample.html" data-team-name="${team.name}">
-                        <img src="${team.logo}" alt="Team ${team.name} image">
-                        <p><span class="team-fullname">${team.name}</span></p>
-                    </a>
-                `;
-
-                articlesContainer.appendChild(article);
+                team.players.forEach(player => {
+                    const article = document.createElement('article');
+                    
+                    article.innerHTML = `
+                        <a href="./player-sample.html" data-player-nickname="${player.nickname}">
+                            <img src="${player.image}" alt="${player.nickname} player image">
+                            <p><span class="player-fullname">${player.fullname}</span></p>
+                        </a>
+                    `;
+                    
+                    articlesContainer.appendChild(article);
+                });
             });
         })
         .catch(error => {
-            console.error('Error fetching the team data:', error);
+            console.error('Error fetching player data:', error);
         });
 });
