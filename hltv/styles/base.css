@@ -172,6 +172,7 @@ main {
 
 #opponents a {
     margin: 0 10px; /* Espacio entre los logos de los equipos */
+    text-decoration: none;
 }
 
 #matchInfo {
@@ -185,6 +186,11 @@ main {
 #matchInfo li {
     padding: 5px 0; /* Espacio entre los elementos de la lista */
     color: var(--text-color); /* Color del texto de la lista */
+}
+
+#opponents>a>p{
+    color: var(--text-color);
+    text-align: center;
 }
 
 /* -------------- */
