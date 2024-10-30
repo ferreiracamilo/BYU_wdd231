@@ -186,6 +186,7 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100px;
 }
 
 #opponents a:hover img {
@@ -202,6 +203,10 @@ main {
 #matchInfo{
     background-color: var(--primary-color); /* Color de fondo de la lista */
     padding: 2%; /* Eliminar padding */
+}
+
+#matchInfo h2{
+    text-align: center;
 }
 
 #matchInfo ul{
