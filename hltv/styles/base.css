@@ -175,12 +175,16 @@ main {
     text-decoration: none;
 }
 
-#matchInfo {
+#matchInfo{
+    background-color: var(--primary-color); /* Color de fondo de la lista */
+    padding: 2%; /* Eliminar padding */
+}
+
+#matchInfo ul{
     list-style: none; /* Eliminar estilo de lista */
     padding: 5%; /* Eliminar padding */
     margin: 20px 0; /* Espacio superior e inferior */
     text-align: center; /* Centrar el texto */
-    background-color: var(--primary-color); /* Color de fondo de la lista */
 }
 
 #matchInfo li {
