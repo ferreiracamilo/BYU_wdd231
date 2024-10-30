@@ -114,7 +114,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*Ensure main will not be overlapped by footer*/
     margin-bottom: 60px;
+    padding-bottom: 80px;
 }
 
 #welcome {
