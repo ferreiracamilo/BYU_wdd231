@@ -199,7 +199,7 @@ main {
 }
 
 /* PLAYER PAGE SPECIFIC STYLES */
-#player-image {
+#topPlayerPage>#player-image {
     width: 150px; /* Ajuste de tamaño de la imagen */
     border-radius: 50%; /* Imagen circular */
     display: block;
