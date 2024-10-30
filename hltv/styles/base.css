@@ -198,6 +198,51 @@ main {
     margin: 5%;
 }
 
+/* PLAYER PAGE SPECIFIC STYLES */
+#player-image {
+    width: 150px; /* Ajuste de tamaño de la imagen */
+    border-radius: 50%; /* Imagen circular */
+    display: block;
+    margin: 20px auto; /* Centrando la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#playerInfo {
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 400px; /* Ancho máximo para centrar la sección */
+    color: var(--text-color); /* Texto en color claro */
+    text-align: center;
+}
+
+#playerInfo h2 {
+    color: var(--text-color); /* Color del título */
+    margin: 10px;
+}
+
+#playerInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#playerInfo li {
+    margin: 8px 0; /* Espacio entre elementos de la lista */
+    font-size: 1em;
+}
+
+#playerInfo li a {
+    color: var(--text-color); /* Color del título */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#playerInfo li a:hover {
+    color: var(--click-color); /* Color al hacer hover */
+}
+
 /* -------------- */
 /* FOOTER SECTION */
 /* -------------- */
