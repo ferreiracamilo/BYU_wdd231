@@ -2,47 +2,47 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const sliderElement = document.querySelector('.slider');
-    let articles = []; // Array de artículos en el slider
-    let currentIndex = 0; // Índice actual del artículo visible
+    let articles = []; // Article array at slider
+    let currentIndex = 0; // current index of article in focus/view at slider
 
-    // Inicializa el slider después de cargar los artículos
+    //Initialize slider after loading articles
     function initSlider() {
         articles = document.querySelectorAll('.slider article');
         updateSlider();
     }
 
-    // Actualiza el desplazamiento del slider para mostrar solo un artículo a la vez
+    //Refresh slider movement to show one item per time
     function updateSlider() {
-        const offset = -currentIndex * 100; // Calcula el desplazamiento para un solo artículo
-        sliderElement.style.transform = `translateX(${offset}%)`; // Desplazamiento en porcentaje
+        const offset = -currentIndex * 100; // Caalculate movement for one article/item
+        sliderElement.style.transform = `translateX(${offset}%)`; // Movement in percentage
     }
 
-    // Función para avanzar en el slider
+    // Function to go forward in slider
     function next() {
         currentIndex++;
         if (currentIndex >= articles.length) {
-            currentIndex = 0; // Vuelve al inicio al llegar al final
+            currentIndex = 0; // Go back to start by reaching at the end
         }
         updateSlider();
     }
 
-    // Función para retroceder en el slider
+    // Function to go back in slider
     function prev() {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = articles.length - 1; // Vuelve al último artículo si retrocede más allá del primero
+            currentIndex = articles.length - 1; // Go back to last article if prev is clicked at first element
         }
         updateSlider();
     }
 
-    // Configura los eventos de los botones
+    // Set events for slider buttons
     document.querySelector('.left-arrow').addEventListener('click', prev);
     document.querySelector('.right-arrow').addEventListener('click', next);
 
-    // Escucha cuando se agreguen artículos dinámicamente y reinicia el slider
+    // Review when articles are loaded dynamically and reset slider
     const observer = new MutationObserver(initSlider);
     observer.observe(sliderElement, { childList: true });
 
-    // Llama a initSlider para la configuración inicial
+    // Call initSlider for initial setup
     initSlider();
 });
