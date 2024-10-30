@@ -175,6 +175,22 @@ main {
     text-decoration: none;
 }
 
+#opponents>p{
+    margin-inline: 10px;
+}
+
+#opponents>article>a>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#opponents>article>a>p{
+    color: var(--text-color);
+    text-align: center;
+    margin: 5%;
+}
+
 #matchInfo{
     background-color: var(--primary-color); /* Color de fondo de la lista */
     padding: 2%; /* Eliminar padding */
@@ -190,12 +206,6 @@ main {
 #matchInfo li {
     padding: 5px 0; /* Espacio entre los elementos de la lista */
     color: var(--text-color); /* Color del texto de la lista */
-}
-
-#opponents>a>p{
-    color: var(--text-color);
-    text-align: center;
-    margin: 5%;
 }
 
 /* PLAYER PAGE SPECIFIC STYLES */
