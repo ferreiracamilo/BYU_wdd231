@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const matchDate = new Date(match.time);
             document.getElementById("matchDate").textContent = matchDate.toISOString().split("T")[0];
             document.getElementById("matchTime").textContent = matchDate.toISOString().split("T")[1].slice(0, 8);
+            const event = new Event('dataLoaded');
+            document.dispatchEvent(event);
         })
         .catch(error => {
             console.error("Error fetching or processing data:", error);
