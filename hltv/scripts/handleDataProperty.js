@@ -2,7 +2,7 @@
 These properties will be utilized to search into the json and load data into some of the pages at some point.
 A listener is added to those anchors containing these properties and if any of these anchor tags are clicked the respective property will be added/updated at localstorage
 
-data-team-name is found on match.html and teams.html pages
+data-team-name is found on match.html, player.html and teams.html pages
 
 data-player-nickname is found on team.html and players.html pages
 
