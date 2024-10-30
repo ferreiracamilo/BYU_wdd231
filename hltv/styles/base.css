@@ -43,7 +43,7 @@ header {
 }
 
 /* -------------- */
-/* Navbar styles */
+/* NAVBAR STYLES */
 /* ------------ */
 
 .navbar {
@@ -214,9 +214,9 @@ main {
     color: var(--text-color); /* Color del texto de la lista */
 }
 
-/* ---------------------------- */
-/* PLAYER PAGE SPECIFIC STYLES */
-/* -------------------------- */
+/* ------------ */
+/* PLAYER PAGE */
+/* ---------- */
 #topPlayerPage>#player-image {
     width: 150px; /* Ajuste de tamaño de la imagen */
     border-radius: 50%; /* Imagen circular */
@@ -261,9 +261,9 @@ main {
     color: var(--click-color); /* Color al hacer hover */
 }
 
-/* -------------------------- */
-/* TEAM PAGE SPECIFIC STYLES */
-/* ------------------------ */
+/* ---------- */
+/* TEAM PAGE */
+/* -------- */
 #topTeamPage {
     background-color: var(--primary-color);
     padding: 20px;
@@ -339,7 +339,6 @@ main {
     margin: 5px 0;
     font-size: 0.9em;
 }
-
 
 /* -------------- */
 /* FOOTER SECTION */
