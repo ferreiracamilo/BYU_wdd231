@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener('click', (event) => {
                 const linkElement = event.currentTarget;
 
+                // Clear all specific localStorage properties to reset state
+                localStorage.removeItem('selectedTeamName');
+                localStorage.removeItem('selectedPlayerNickname');
+                localStorage.removeItem('selectedMatchId');
+
+                // Set only the relevant property based on the clicked link's data attribute
                 if (linkElement.dataset.teamName) {
                     localStorage.setItem('selectedTeamName', linkElement.dataset.teamName);
                     console.log("Team name stored:", linkElement.dataset.teamName);
