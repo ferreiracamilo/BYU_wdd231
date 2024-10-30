@@ -191,6 +191,7 @@ main {
 #opponents>a>p{
     color: var(--text-color);
     text-align: center;
+    margin: 5%;
 }
 
 /* -------------- */
