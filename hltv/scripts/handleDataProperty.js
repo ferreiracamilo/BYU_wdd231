@@ -7,7 +7,6 @@ data-team-name is found on match.html and teams.html pages
 data-player-nickname is found on team.html and players.html pages
 
 data-match-id is found on matches.html page
-
 */
 
 document.addEventListener("DOMContentLoaded", () => {
