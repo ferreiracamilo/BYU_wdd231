@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #3a3a3a; /* Color principal */
-    --secondary-color: #e63946; /* Color secundario */
-    --text-color: #ffffff; /* Color del texto */
-    --hover-move: -2px; /* Desplazamiento al hacer hover */
-    --click-color: #ff4d4d; /* Color al hacer clic */
-    --font-family: 'Arial', sans-serif; /* Fuente general */
+    --primary-color: #3a3a3a;
+    --secondary-color: #e63946;
+    --text-color: #ffffff;
+    --hover-move: -2px;
+    --click-color: #ff4d4d;
+    --font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -168,13 +168,13 @@ main {
 /* --------- */
 #opponents {
     display: flex;
-    align-items: center; /* Alinea los elementos del contenedor */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    margin: 20px 0; /* Espacio superior e inferior */
+    align-items: center; /* Align elements within the container */
+    justify-content: center; /* Center content at x axis */
+    margin: 20px 0;
 }
 
 #opponents a {
-    margin: 0 10px; /* Espacio entre los logos de los equipos */
+    margin: 0 10px; /* Space between teams logos articles */
     text-decoration: none;
 }
 
@@ -201,8 +201,8 @@ main {
 }
 
 #matchInfo{
-    background-color: var(--primary-color); /* Color de fondo de la lista */
-    padding: 2%; /* Eliminar padding */
+    background-color: var(--primary-color);
+    padding: 2%;
 }
 
 #matchInfo h2{
@@ -210,25 +210,25 @@ main {
 }
 
 #matchInfo ul{
-    list-style: none; /* Eliminar estilo de lista */
-    padding: 5%; /* Eliminar padding */
-    margin: 20px 0; /* Espacio superior e inferior */
-    text-align: center; /* Centrar el texto */
+    list-style: none;
+    padding: 5%;
+    margin: 20px 0;
+    text-align: center;
 }
 
 #matchInfo li {
-    padding: 5px 0; /* Espacio entre los elementos de la lista */
-    color: var(--text-color); /* Color del texto de la lista */
+    padding: 5px 0; /* Space between elements from the list */
+    color: var(--text-color);
 }
 
 /* ------------ */
 /* PLAYER PAGE */
 /* ---------- */
 #topPlayerPage>#player-image {
-    width: 150px; /* Ajuste de tamaño de la imagen */
-    border-radius: 50%; /* Imagen circular */
+    width: 150px;
+    border-radius: 50%; /* Force image radius shape */
     display: block;
-    margin: 20px auto; /* Centrando la imagen */
+    margin: 20px auto; /* Center image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -237,13 +237,13 @@ main {
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
-    max-width: 400px; /* Ancho máximo para centrar la sección */
-    color: var(--text-color); /* Texto en color claro */
+    max-width: 400px;
+    color: var(--text-color);
     text-align: center;
 }
 
 #playerInfo h2 {
-    color: var(--text-color); /* Color del título */
+    color: var(--text-color);
     margin: 10px;
 }
 
@@ -254,18 +254,18 @@ main {
 }
 
 #playerInfo li {
-    margin: 8px 0; /* Espacio entre elementos de la lista */
+    margin: 8px 0; /* Space betweeen list elements */
     font-size: 1em;
 }
 
 #playerInfo li a {
-    color: var(--text-color); /* Color del título */
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 #playerInfo li a:hover {
-    color: var(--click-color); /* Color al hacer hover */
+    color: var(--click-color);
 }
 
 /* ---------- */
@@ -358,8 +358,8 @@ main {
 
 .slider-container {
     position: relative;
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    overflow: hidden; /* Hide elements out of scope from focus element at slider */
+    width: 100%;
 }
 
 .slider-container a {
@@ -368,33 +368,33 @@ main {
 }
 
 .slider {
-    display: flex; /* Disposición horizontal */
-    transition: transform 0.5s ease; /* Suaviza la transición al moverse */
+    display: flex;
+    transition: transform 0.5s ease; /* Soften transition */
 }
 
 .slider-container > .slider > article {
-    flex: 0 0 100%; /* Cada artículo ocupará el 100% del ancho del contenedor */
-    display: flex; /* Permite que los elementos internos sean flexibles */
-    justify-content: center; /* Centra el contenido del artículo */
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centra verticalmente las flechas */
-    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    transform: translateY(-50%); /* Center at AXIS Y the arrows */
+    background: rgba(255, 255, 255, 0.7); /* Background semitransparent */
     border: none;
     cursor: pointer;
-    padding: 10px; /* Espaciado interno */
-    z-index: 10; /* Asegúrate de que las flechas estén por encima */
+    padding: 10px; /* Internal space */
+    z-index: 10;
 }
 
 .left-arrow {
-    left: 10px; /* Ubicación a la izquierda */
+    left: 10px;
 }
 
 .right-arrow {
-    right: 10px; /* Ubicación a la derecha */
+    right: 10px;
 }
 
 /* ------------- */
@@ -406,7 +406,7 @@ main {
 }
 
 .matches h1{
-    text-align: center; /* Centra el texto horizontalmente */
+    text-align: center;
 }
 
 .matches p{
@@ -416,20 +416,20 @@ main {
 .match {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el contenido en el slider */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    justify-content: center; /* Center content at slider */
+    width: 100%;
 }
 
 .team-logo {
-    width: 50px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción */
+    width: 50px;
+    height: auto;
 }
 
 .score {
-    font-size: 24px; /* Tamaño de la fuente para el resultado */
-    font-weight: bold; /* Negrita para resaltar el resultado */
-    text-align: center; /* Asegura que el texto esté centrado */
-    flex: 1; /* Permite que el resultado ocupe el espacio restante */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1; /* Allow result to take remaining space */
 }
 
 /* ------------- */
@@ -443,21 +443,21 @@ main {
 }
 .players article {
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
+    flex-direction: column; /* Align elements in the column */
+    align-items: center;
+    text-align: center;
 }
 
 .players article img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: 150px; /* Mantiene la proporción cuadrada */
-    border-radius: 50%; /* Hace la imagen redonda */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
-    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+    width: 150px;
+    height: 150px; /* Mantain square prooportions */
+    border-radius: 50%; /* Force shape to be rounded */
+    object-fit: cover; /* Enforce image to have same proportion */
+    margin-bottom: 10px; /* Space between image and name */
 }
 
 .players>.player-fullname {
-    color: var(--text-color); /* Color del texto (ajusta según tu paleta) */
+    color: var(--text-color);
 }
 
 /* ------------- */
@@ -473,21 +473,21 @@ main {
 
 .teams article {
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
+    flex-direction: column; /* Align elements in the column */
+    align-items: center; /* Center at X axis */
+    text-align: center;
 }
 
 .teams article img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: 150px; /* Mantiene la proporción cuadrada */
-    border-radius: 50%; /* Hace la imagen redonda */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
-    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 10px;
 }
 
 .teams>.team-fullname {
-    color: var(--text-color); /* Color del texto (ajusta según tu paleta) */
+    color: var(--text-color);
 }
 
 /* -------------- */
@@ -495,7 +495,7 @@ main {
 /* -------------- */
 footer {
     text-align: center;
-    position: fixed; /* Hace que el footer esté siempre al fondo */
+    position: fixed; /* Force footer to remain in the bottom */
     width: 100%;
     padding: 10px;
     background: linear-gradient(to top, #f8f8f8, #e8e8e8);
