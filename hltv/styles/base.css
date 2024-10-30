@@ -402,6 +402,10 @@ main {
     text-align: center; /* Centra el texto horizontalmente */
 }
 
+.matches p{
+    padding-inline: 10px;
+}
+
 .match {
     display: flex;
     align-items: center;
