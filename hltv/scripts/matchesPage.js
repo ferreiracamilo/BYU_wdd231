@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 articlesContainer.appendChild(article);
             });
+            const event = new Event('dataLoaded');
+            document.dispatchEvent(event);
         })
         .catch(error => {
             console.error('Error fetching the team data:', error);
