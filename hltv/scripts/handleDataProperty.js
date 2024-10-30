@@ -10,19 +10,34 @@ data-match-id is found on matches.html page
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('a[data-team-name], a[data-player-nickname], a[data-match-id]').forEach(link => {
-        link.addEventListener('click', (event) => {
-            const linkElement = event.currentTarget;
+    document.addEventListener('dataLoaded', () => {
+        console.log("Data has been loaded.");
+        
+        const links = document.querySelectorAll('a[data-team-name], a[data-player-nickname], a[data-match-id]');
+        console.log("Links found:", links);
 
-            if (linkElement.dataset.teamName) {
-                localStorage.setItem('selectedTeamName', linkElement.dataset.teamName);
-            }
-            if (linkElement.dataset.playerNickname) {
-                localStorage.setItem('selectedPlayerNickname', linkElement.dataset.playerNickname);
-            }
-            if (linkElement.dataset.matchId) {
-                localStorage.setItem('selectedMatchId', linkElement.dataset.matchId);
-            }
+        if (links.length === 0) {
+            console.warn("No links found with the specified data attributes.");
+            return;
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                const linkElement = event.currentTarget;
+
+                if (linkElement.dataset.teamName) {
+                    localStorage.setItem('selectedTeamName', linkElement.dataset.teamName);
+                    console.log("Team name stored:", linkElement.dataset.teamName);
+                }
+                if (linkElement.dataset.playerNickname) {
+                    localStorage.setItem('selectedPlayerNickname', linkElement.dataset.playerNickname);
+                    console.log("Player nickname stored:", linkElement.dataset.playerNickname);
+                }
+                if (linkElement.dataset.matchId) {
+                    localStorage.setItem('selectedMatchId', linkElement.dataset.matchId);
+                    console.log("Match ID stored:", linkElement.dataset.matchId);
+                }
+            });
         });
     });
 });
