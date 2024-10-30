@@ -390,9 +390,9 @@ article {
     right: 10px; /* Ubicación a la derecha */
 }
 
-/* -------------- */
+/* ------------- */
 /* MATCHES PAGE */
-/* -------------- */
+/* ----------- */
 
 .matches h1{
     text-align: center; /* Centra el texto horizontalmente */
@@ -408,7 +408,6 @@ article {
 .team-logo {
     width: 50px; /* Ajusta el tamaño del logo */
     height: auto; /* Mantiene la proporción */
-    margin: 0 20px; /* Espaciado entre los logos y el resultado */
 }
 
 .score {
@@ -416,6 +415,31 @@ article {
     font-weight: bold; /* Negrita para resaltar el resultado */
     text-align: center; /* Asegura que el texto esté centrado */
     flex: 1; /* Permite que el resultado ocupe el espacio restante */
+}
+
+/* ------------- */
+/* PLAYERS PAGE */
+/* ----------- */
+.players h1{
+    text-align: center;
+}
+.players article {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.players article img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Mantiene la proporción cuadrada */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.players>.player-fullname {
+    color: var(--text-color); /* Color del texto (ajusta según tu paleta) */
 }
 
 /* -------------- */
@@ -431,3 +455,13 @@ footer {
     color: #333;
     bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
