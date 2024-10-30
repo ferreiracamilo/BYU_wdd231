@@ -186,6 +186,11 @@ main {
     margin-right: auto;
 }
 
+#opponents a:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 #opponents>article>a>p{
     color: var(--text-color);
     text-align: center;
